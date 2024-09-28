@@ -1,7 +1,8 @@
-package br.com.payrollapi.services;
+package br.com.payrollapi.services.impl;
 
 import br.com.payrollapi.domain.Payroll;
 import br.com.payrollapi.feignClients.UserFeign;
+import br.com.payrollapi.services.PayrollService;
 import br.com.payrollapi.services.exceptions.ObjectNotFoundException;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Slf4j
 @Service
-public class PayrollService {
+public class PayrollServiceImpl implements PayrollService {
 
     private final Environment env;
     private final UserFeign userFeign;

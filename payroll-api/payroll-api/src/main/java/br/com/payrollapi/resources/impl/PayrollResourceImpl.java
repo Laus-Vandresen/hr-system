@@ -2,6 +2,7 @@ package br.com.payrollapi.resources.impl;
 
 
 import br.com.payrollapi.domain.Payroll;
+import br.com.payrollapi.resources.PayrollResource;
 import br.com.payrollapi.services.PayrollService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/payments")
-public class PayrollResourceImpl {
+public class PayrollResourceImpl implements PayrollResource {
 
     private final PayrollService payrollService;
 
